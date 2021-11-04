@@ -4,13 +4,47 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="main-rectangle">
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            <table class="calculator-component">
+                <tr>
+                    <td>
+                        Amount
+                    </td>
+                    <td>
+                        <input type="number"  id="principal">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Interest Rate
+                    </td>
+                    <td>
+                        <input type="range"  id="rate">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        No. of Years
+                    </td>
+                    <td>
+                        <input type="number"  id="years"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="compute()">Compute Interest</button>
+                    </td>
+                </tr>
+             </table>
 
-        <button onclick="compute()">Compute</button>
+             
+            
+            Interest : <span id="result"></span><br>
+            </div>
+        </div>
+
+
     </body>
 </html>
