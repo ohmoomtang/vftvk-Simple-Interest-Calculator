@@ -1,6 +1,14 @@
 function compute()
 {
+    //Clear result first
+    document.getElementById("result").innerHTML = "";
+
     var amount = document.getElementById("principal").value;
+    if(amount<1){
+        alert("Please enter a positive amount number");
+        document.getElementById("principal").focus();
+        return;
+    }
     var rate = document.getElementById("rate").value;
     var years = document.getElementById("years").value;
     var displayedYear = new Date().getFullYear()+parseInt(years);
