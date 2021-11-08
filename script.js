@@ -7,6 +7,7 @@ function compute()
     if(amount<1){
         alert("Please enter a positive amount number");
         document.getElementById("principal").focus();
+        event.preventDefault();
         return;
     }
     var rate = document.getElementById("rate").value;
@@ -16,10 +17,10 @@ function compute()
     
     document.getElementById("result").innerHTML = 
     "if you deposit <mark>" + amount + "</mark>,<br />at an interest rate of <mark>" + rate + "%</mark>.<br />You will receive an amount of <mark>" + interestObtained + "</mark>,<br />in the year <mark>" + displayedYear + "</mark>";
+    event.preventDefault();
 }
 
 function updateInterestRateValue(){
     var rate = document.getElementById("rate").value;
     document.getElementById("interestRateValue").innerHTML = parseFloat(rate).toFixed(2) + "%";
 }
-        
